@@ -10,13 +10,12 @@
     <h1>This is the weather app my G</h1>
     <form method='POST'>
         {% csrf_token %}
+        <!-- {{ form.city_name }} -->
         <input id='input' name='city_input' placeholder="Type city name here..." required>
         <button type="submit">Search</button>
     </form>
     
-    <!-- <p>{{ response }}</p> -->
     <div style="text-align: center;">
-        <!-- <p>{{ response }}</p> -->
         <h3>{{ response.main.temp }} K</h3>
         <h2>{{ response.name }}</h2>
         <img src='http://openweathermap.org/img/w/{{ response.weather.0.icon }}.png' />
